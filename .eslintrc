@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "Wilddog": false,
+    "tinymce": false
+  },
+  "plugins": [
+    "html"
+  ],
+  "extends": [
+    "standard"
+  ]
+}
