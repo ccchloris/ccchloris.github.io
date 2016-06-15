@@ -1,7 +1,8 @@
 {
   "globals": {
     "Wilddog": false,
-    "tinymce": false
+    "tinymce": false,
+    "WildVue": false
   },
   "plugins": [
     "html"

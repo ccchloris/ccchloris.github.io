@@ -67,6 +67,23 @@ class API {
       })
     })
   }
+
+  /**
+   * 删除一篇文章
+   * @param {String} key - 那篇文章的 key
+   * @returns {Promise}
+   */
+  deleteBlog (key) {
+    return new Promise((resolve, reject) => {
+      this.blogs.child(key).remove(err => {
+        if (err) {
+          reject(err)
+          return
+        }
+        resolve()
+      })
+    })
+  }
 }
 
 export default new API()

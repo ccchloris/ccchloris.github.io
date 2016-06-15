@@ -16,9 +16,9 @@
                    title="输入密码"
                    :type="showPwd ? 'text' : 'password'"
                    v-model="m.password">
-            <div class="input-group-addon" @click="showPwd = !showPwd">
-              <span v-show="showPwd">隐藏</span>
-              <span v-else>显示</span>
+            <div class="input-group-addon"
+                 @click="showPwd = !showPwd"
+                 v-text="showPwd ? '隐藏' : '显示'">
             </div>
           </div>
         </div>

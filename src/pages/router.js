@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import globalComponents from '../components/_install'
 import globalDirectives from '../directives/_install'
 
+Vue.use(WildVue)
 Vue.use(VueRouter)
 Vue.use(globalComponents)
 Vue.use(globalDirectives)
@@ -20,10 +21,6 @@ router.map({
       '/': {
         name: '首页',
         component: require('./front/index.vue')
-      },
-      '/list': {
-        name: '博客列表',
-        component: require('./front/list.vue')
       }
     }
   },
@@ -40,13 +37,22 @@ router.map({
         name: '后台首页',
         component: require('./back/index.vue')
       },
-      '/new-blog': {
-        name: '写文章',
-        component: require('./back/new-blog.vue')
-      },
-      '/edit-blog/:id': {
-        name: '编辑文章',
-        component: require('./back/new-blog.vue')
+      '/blog': {
+        component: require('./back/blog/_root.vue'),
+        subRoutes: {
+          '/': {
+            name: '后台文章列表',
+            component: require('./back/blog/list.vue')
+          },
+          '/create': {
+            name: '写文章',
+            component: require('./back/blog/new-blog.vue')
+          },
+          '/edit/:id': {
+            name: '编辑文章',
+            component: require('./back/blog/new-blog.vue')
+          }
+        }
       }
     }
   }
