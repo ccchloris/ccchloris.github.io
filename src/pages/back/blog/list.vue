@@ -2,7 +2,7 @@
   <ol class="breadcrumb">
     <li class="active">文章管理</li>
   </ol>
-  <button type="button" class="btn" v-link="{name:'写文章'}">写文章</button>
+  <button type="button" class="btn btn-primary" style="margin-bottom: 15px;" v-link="{name:'写文章'}">写文章</button>
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>

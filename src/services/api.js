@@ -42,22 +42,36 @@ class API {
   }
 
   /**
-   * 保存博客的方法
+   * 保存(包括修改)博客的方法
    * @param blog
    */
   saveBlog (blog) {
     return new Promise((resolve, reject) => {
-      // todo 这个方法同时也是修改博客的方法
       const now = Wilddog.ServerValue.TIMESTAMP
-      blog.createTime = now // todo 当修改文件时,这里不要写 createTime
+      const key = blog['.key']
+      if (key) {
+        delete blog['.key']
+      } else {
+        blog.createTime = now
+      }
       blog.lastModifyTime = now
-      this.blogs.push(blog, err => {
-        if (err) {
-          reject(err)
-          return
-        }
-        resolve()
-      })
+      if (key) {
+        this.blogs.child(key).update(blog, err => {
+          if (err) {
+            reject(err)
+            return
+          }
+          resolve()
+        })
+      } else {
+        this.blogs.push(blog, err => {
+          if (err) {
+            reject(err)
+            return
+          }
+          resolve()
+        })
+      }
     })
   }
 
@@ -72,6 +86,19 @@ class API {
       // todo 查询blog, 而不是返回所有 blog
       this.blogs.orderByChild('lastModifyTime').once('value', snapshot => {
         resolve(snapshot.val())
+      })
+    })
+  }
+
+  /**
+   * 获取一篇文章的数据
+   * @param key
+   * @returns {Promise}
+   */
+  getBlog (key) {
+    return new Promise((resolve, reject) => {
+      this.blogs.child(key).once('value', value => {
+        resolve(value.val())
       })
     })
   }

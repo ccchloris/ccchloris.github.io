@@ -9,8 +9,8 @@
         <input type="text"
                class="form-control"
                placeholder="文章标题"
-               title="输入邮箱"
-               v-model="m.title"
+               required
+               v-model="title"
                v-focus>
       </div>
 
@@ -27,18 +27,18 @@
     data () {
       return {
         id: this.$route.params.id,
-        m: {
-          title: '',
-          $_content: ''
-        }
+        title: ''
       }
     },
     methods: {
       submit () {
         this.$refs.tinymce.getContent().then(content => {
           const blog = {
-            title: this.m.title,
+            title: this.title,
             content
+          }
+          if (this.id) {
+            blog['.key'] = this.id
           }
           api.saveBlog(blog).then(() => {
             window.alert('保存成功!')
@@ -50,7 +50,13 @@
       }
     },
     ready () {
-      this.$refs.tinymce.setContent(this.m.$_content)
+      const { id } = this.$route.params
+      if (id) {
+        api.getBlog(id).then(model => {
+          this.title = model.title
+          this.$refs.tinymce.setContent(model.content)
+        })
+      }
     }
   }
 </script>
