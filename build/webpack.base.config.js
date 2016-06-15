@@ -18,7 +18,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.(woff2?|ttf|png|svg|eot)$/,
+        test: /\.(woff2?|ttf|png|svg|eot|jpe?g|gif|bmp)$/,
         loader: 'file-loader',
         query: {
           name: '[name].[hash:6].[ext]'

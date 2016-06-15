@@ -83,6 +83,7 @@
     }
 
     .img {
+      background-image: url(./index-images/1.jpg);
       @include img-item($imgH);
       &:first-child {
         margin-bottom: $space;

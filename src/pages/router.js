@@ -39,6 +39,10 @@ router.map({
       '/new-blog': {
         name: '写文章',
         component: require('./back/new-blog.vue')
+      },
+      '/edit-blog/:id': {
+        name: '编辑文章',
+        component: require('./back/new-blog.vue')
       }
     }
   }
