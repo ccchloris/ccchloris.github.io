@@ -5,11 +5,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import globalComponents from '../components/_install'
 import globalDirectives from '../directives/_install'
+import globalFilters from '../filters/_install'
 
 Vue.use(WildVue)
 Vue.use(VueRouter)
 Vue.use(globalComponents)
 Vue.use(globalDirectives)
+Vue.use(globalFilters)
 
 const router = new VueRouter()
 

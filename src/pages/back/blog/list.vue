@@ -17,8 +17,8 @@
         <td>
           <a v-text="article.title" v-link="{name: '编辑文章', params: {id: article['.key']}}"></a>
         </td>
-        <td v-text="article.createTime"></td>
-        <td v-text="article.lastModifyTime"></td>
+        <td v-text="article.createTime | toDate"></td>
+        <td v-text="article.lastModifyTime | toDate"></td>
         <td>
           <a href="#" @click.prevent="del(article['.key'])">删除</a>
         </td>
