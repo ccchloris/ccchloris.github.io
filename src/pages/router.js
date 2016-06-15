@@ -52,12 +52,11 @@ router.map({
   }
 })
 
-import store from '../vuex/store'
-import { hasSigned } from '../vuex/actions'
+import api from '../services/api'
 // 以 `BACK_URL_PREFIX` 开头的路径都需要用户已登录
 router.beforeEach(({ to, next, redirect }) => {
   const { path } = to
-  if (path.startsWith(BACK_URL_PREFIX) && !hasSigned(store)) {
+  if (path.startsWith(BACK_URL_PREFIX) && !api.isSignIn()) {
     redirect({
       name: '登录',
       query: {

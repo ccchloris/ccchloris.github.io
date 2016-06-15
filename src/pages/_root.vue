@@ -10,11 +10,7 @@
 </script>
 
 <style lang="sass" rel="stylesheet/scss">
-  /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+  // 按需加载 bootstrap
   // Core variables and mixins
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -60,4 +56,12 @@
   // Utility classes
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+  // 全局样式
+  body, html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
 </style>

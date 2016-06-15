@@ -1,7 +1,23 @@
 class API {
   constructor () {
-    this.root = new Wilddog('https://my-baby.wilddogio.com/')
-    this.blogs = this.root.child('blogs')
+    const root = this.root = new Wilddog('https://my-baby.wilddogio.com/')
+    this.blogs = root.child('blogs')
+  }
+
+  /**
+   * 判断用户是否已经登录
+   * @returns {Boolean}
+   */
+  isSignIn () {
+    return !!this.root.getAuth()
+  }
+
+  /**
+   * 获取用户的登录信息
+   * @returns {*}
+   */
+  getAuth () {
+    return this.root.getAuth()
   }
 
   /**
@@ -18,31 +34,9 @@ class API {
       }, (err, data) => {
         if (err) {
           reject(err.code)
-        } else {
-          /* data 的数据结构:
-           {
-           "provider": "password",
-           "uid": "simplelogin:1464836206865413",
-           "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJpYXQiOjE0NjQ4NDA1MTQsImQiOnsidWlkIjoic2ltcGxlbG9naW46MTQ2NDgzNjIwNjg2NTQxMyIsInByb3ZpZGVyIjoicGFzc3dvcmQiLCJ0b2tlblZlcnNpb24iOjB9fQ.cekc6uweAD4qGMMDxiF6Z7BnLf9WywPAI6ved3y-2bg",
-           "password": {
-           "email": "milk.lee@qq.com",
-           "isTemporaryPassword": false
-           },
-           "expires": 1464926914,
-           "auth": {
-           "uid": "simplelogin:1464836206865413",
-           "provider": "password",
-           "tokenVersion": 0
-           }
-           }
-           */
-          resolve({
-            email, // 用户的邮箱地址
-            uid: data.uid, // 用户的唯一 id
-            expires: 1464926914, // 此次登陆的过期时间
-            isTemp: data.password.isTemporaryPassword // 是否是临时密码
-          })
+          return
         }
+        resolve(data)
       })
     })
   }

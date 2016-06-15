@@ -11,9 +11,9 @@
   import api from '../../services/api'
   export default {
     route: {
-      data () {
-        return api.queryBlog().then(blogs => ({ blogs }))
-      }
+//      data () {
+//        return api.queryBlog().then(blogs => ({ blogs }))
+//      }
     },
     data () {
       return {
