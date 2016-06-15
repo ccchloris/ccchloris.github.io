@@ -3,8 +3,12 @@ const BACK_URL_PREFIX = '/wtf'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import globalComponents from '../components/_install'
+import globalDirectives from '../directives/_install'
 
 Vue.use(VueRouter)
+Vue.use(globalComponents)
+Vue.use(globalDirectives)
 
 const router = new VueRouter()
 
@@ -50,7 +54,7 @@ router.map({
 
 import store from '../vuex/store'
 import { hasSigned } from '../vuex/actions'
-// 以 /mylover 开头的路径都需要用户已登录
+// 以 `BACK_URL_PREFIX` 开头的路径都需要用户已登录
 router.beforeEach(({ to, next, redirect }) => {
   const { path } = to
   if (path.startsWith(BACK_URL_PREFIX) && !hasSigned(store)) {

@@ -8,7 +8,7 @@
 </template>
 
 <script type="text/babel">
-  import api from '../../utils/api'
+  import api from '../../services/api'
   export default {
     route: {
       data () {
