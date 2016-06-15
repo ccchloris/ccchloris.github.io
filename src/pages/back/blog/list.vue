@@ -39,9 +39,9 @@
        * @param {String} key
        */
       del (key) {
-        if (confirm('确定要删除这篇文章吗?此操作不可恢复。')) {
+        if (window.confirm('确定要删除这篇文章吗?此操作不可恢复。')) {
           api.deleteBlog(key).then(() => {
-            alert('成功删除')
+            window.alert('成功删除')
           })
         }
       }
