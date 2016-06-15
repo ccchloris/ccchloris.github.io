@@ -46,11 +46,19 @@ class API {
    * @param blog
    */
   saveBlog (blog) {
-    // todo 这个方法同时也是修改博客的方法
-    const now = Wilddog.ServerValue.TIMESTAMP
-    blog.createTime = now // todo 当修改文件时,这里不要写 createTime
-    blog.lastModifyTime = now
-    this.blogs.push(blog)
+    return new Promise((resolve, reject) => {
+      // todo 这个方法同时也是修改博客的方法
+      const now = Wilddog.ServerValue.TIMESTAMP
+      blog.createTime = now // todo 当修改文件时,这里不要写 createTime
+      blog.lastModifyTime = now
+      this.blogs.push(blog, err => {
+        if (err) {
+          reject(err)
+          return
+        }
+        resolve()
+      })
+    })
   }
 
   /**

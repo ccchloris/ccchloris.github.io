@@ -26,6 +26,8 @@
     }
 
     .right-content {
+      flex-grow: 99; // 让右侧总是占满
+      height: 100%;
       padding: 15px;
     }
   }

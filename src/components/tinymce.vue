@@ -5,6 +5,12 @@
 
 <script type="text/babel">
   export default {
+    props: {
+      height: {
+        type: Number,
+        default: 300
+      }
+    },
     methods: {
       /**
        * 设置编辑器的内容
@@ -30,7 +36,7 @@
     ready () {
       tinymce.init({
         selector: 'textarea',
-        height: 500,
+        height: this.height,
         theme: 'modern',
         plugins: [
           'advlist autolink lists link image charmap print preview hr anchor pagebreak',
