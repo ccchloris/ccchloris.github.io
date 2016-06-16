@@ -5,26 +5,26 @@
 
       <div class="center-block img-box">
         <div>
-          <div class="img img1">
+          <div class="img img1" v-link="{name:'文章详情',params:{id:'-KKI-iXJtjxL7AgkGoKc'}}">
             <div class="img-masker">
               <div>JILL STUART</div>
               <div>———— 唇膏 ————</div>
             </div>
           </div>
-          <div class="img img2">
+          <div class="img img2" v-link="{name:'文章详情',params:{id:'-KKMYF18FW8DoIHmQHHK'}}">
             <div class="img-masker">x</div>
           </div>
         </div>
         <div>
-          <div class="big-img img5">
+          <div class="big-img img5" v-link="{name:'文章详情',params:{id:'-KKMXm8mObPh8zlCBktu'}}">
             <div class="img-masker">x</div>
           </div>
         </div>
         <div>
-          <div class="img img3">
+          <div class="img img3" v-link="{name:'文章详情',params:{id:'-KKMCULBuYa1-VXlJkBT'}}">
             <div class="img-masker">x</div>
           </div>
-          <div class="img img4">
+          <div class="img img4" v-link="{name:'文章详情',params:{id:'-KKMYA08pfLAKefyDGBK'}}">
             <div class="img-masker">x</div>
           </div>
         </div>
@@ -85,9 +85,10 @@
 
   #index-one {
     @extend %section;
-    $imgW: 270px;
+    /*<!--$imgW: 270px;-->*/
     $imgH: 200px;
     $space: 20px;
+    $imgW: (900px - ($space * 2)) / 3;
 
     // 五格图片
     .img-box {
@@ -101,6 +102,9 @@
     }
 
     @mixin img-item($imgHeight) {
+      cursor: pointer;
+      background-size: cover;
+      background-position: center center;
       overflow: hidden;
       height: $imgHeight;
       $maskHeight: 60px;

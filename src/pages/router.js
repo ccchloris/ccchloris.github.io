@@ -23,6 +23,10 @@ router.map({
       '/': {
         name: '首页',
         component: require('./front/index.vue')
+      },
+      '/post/:id': {
+        name: '文章详情',
+        component: require('./front/detail.vue')
       }
     }
   },
