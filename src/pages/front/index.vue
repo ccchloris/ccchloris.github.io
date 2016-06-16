@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="wrap">
     <section id="index-one">
       <h1 class="text-center">———— 萌萌少女心 ————</h1>
 

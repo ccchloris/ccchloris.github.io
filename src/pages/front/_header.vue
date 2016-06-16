@@ -3,7 +3,7 @@
   <div id="header-image"></div>
   <!-- 导航栏 -->
   <nav id="header-nav">
-    <div class="container">
+    <div class="wrap">
       <ul class="list-unstyled">
         <li><a href="#">主页</a></li>
         <li><a href="#">发现美</a></li>

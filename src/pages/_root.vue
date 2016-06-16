@@ -64,4 +64,9 @@
     width: 100%;
     overflow-x: hidden;
   }
+
+  .wrap {
+    width: 900px;
+    margin: 0 auto;
+  }
 </style>
