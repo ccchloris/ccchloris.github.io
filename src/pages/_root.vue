@@ -65,6 +65,10 @@
     overflow-x: hidden;
   }
 
+  body {
+    font-family: "Times New Roman", "Microsoft YaHei", Times, serif;
+  }
+
   .wrap {
     width: 900px;
     margin: 0 auto;
