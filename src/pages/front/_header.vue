@@ -37,7 +37,7 @@
         $height: 60px;
 
         a {
-          color: #dfcfbe;
+          color: #fff;
           font-size: 18px;
         }
       }

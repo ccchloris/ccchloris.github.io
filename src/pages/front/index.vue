@@ -12,20 +12,32 @@
             </div>
           </div>
           <div class="img img2" v-link="{name:'文章详情',params:{id:'-KKMYF18FW8DoIHmQHHK'}}">
-            <div class="img-masker">x</div>
+            <div class="img-masker">
+              <div>LINE FRIENDS</div>
+              <div>———— 咖啡店 ————</div>
+            </div>
           </div>
         </div>
         <div>
           <div class="big-img img5" v-link="{name:'文章详情',params:{id:'-KKMXm8mObPh8zlCBktu'}}">
-            <div class="img-masker">x</div>
+            <div class="img-masker">
+              <div>牛仔背心裙</div>
+              <div>———— 服装 ————</div>
+            </div>
           </div>
         </div>
         <div>
           <div class="img img3" v-link="{name:'文章详情',params:{id:'-KKMCULBuYa1-VXlJkBT'}}">
-            <div class="img-masker">x</div>
+            <div class="img-masker">
+              <div>DIY棉花糖机</div>
+              <div>———— 小物 ————</div>
+            </div>
           </div>
           <div class="img img4" v-link="{name:'文章详情',params:{id:'-KKMYA08pfLAKefyDGBK'}}">
-            <div class="img-masker">x</div>
+            <div class="img-masker">
+              <div>CHLOE</div>
+              <div>———— 香水 ————</div>
+            </div>
           </div>
         </div>
       </div>
@@ -116,6 +128,16 @@
         opacity: 0.5;
         transition: transform 0.2s;
         transform: translateY($imgHeight);
+        padding-top: 3px;
+
+        div:first-child {
+          font-size: 24px;
+          font-family: "Open Sans", sans-serif;
+          letter-spacing: 5px;
+        }
+        div:last-child {
+          font-size: 12px;
+        }
       }
 
       &:hover > div {
