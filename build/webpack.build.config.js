@@ -39,7 +39,8 @@ config.plugins = [
     }
   }),
   new webpack.optimize.OccurenceOrderPlugin(true),
-  new webpack.optimize.DedupePlugin()
+  new webpack.optimize.DedupePlugin(),
+  new CopyWebpackPlugin([{ from: './static' }])
 ]
 
 module.exports = config

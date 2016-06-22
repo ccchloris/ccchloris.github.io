@@ -14,7 +14,7 @@ config.devServer = {
   noInfo: true,
   host: '0.0.0.0',
   port: 12356,
-  contentBase: './no-this-dir'
+  contentBase: './static'
 }
 
 module.exports = config
