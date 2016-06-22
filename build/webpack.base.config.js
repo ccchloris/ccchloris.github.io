@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index',
   output: {
     path: './dist',
-    filename: '[name].[hash:6].js'
+    filename: '[name].js'
   },
   module: {
     loaders: [
@@ -21,7 +21,7 @@ module.exports = {
         test: /\.(woff2?|ttf|png|svg|eot|jpe?g|gif|bmp)$/,
         loader: 'file-loader',
         query: {
-          name: '[name].[hash:6].[ext]'
+          name: '[name].[ext]'
         }
       },
       {
@@ -56,7 +56,7 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html'
     }),
-    new ExtractTextPlugin('[name].[hash:6].css')
+    new ExtractTextPlugin('[name].css')
   ]
 }
 
