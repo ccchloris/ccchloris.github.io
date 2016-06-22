@@ -1,10 +1,9 @@
 <template>
   <!-- 头图 -->
-  <!-- v-fixed-top 指令同时也依赖这个元素来判断当前滚动条的位置 -->
   <div id="header-image"></div>
   <!-- 导航栏 -->
   <nav id="nav">
-    <div class="header-nav" v-fixed-top><!-- v-fixed-top-->
+    <div class="header-nav" v-fixed-top>
       <div class="wrap">
         <ul class="list-unstyled">
           <li><a href="#">主页</a></li>
@@ -28,9 +27,6 @@
 
     .header-nav {
       background-color: #2a2a2a;
-      /*position: fixed;*/
-      /*top: 0;*/
-      /*left: 0;*/
       width: 100%;
 
       ul {
