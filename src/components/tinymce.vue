@@ -48,15 +48,19 @@
         toolbar2: 'print preview media | forecolor backcolor',
         image_advtab: true,
         templates: [
-          { title: 'Test template 1', content: 'Test 1' },
-          { title: 'Test template 2', content: 'Test 2' }
+          {
+            title: '点击购买',
+            content: '<div class="buy-it"><div class="info"><div class="value">￥63.00</div><div class="likes">2345人喜欢</div></div><div><a href="填写链接" target="_blank">查看详情</a></div>'
+          }
         ]
       }).then(() => {
         this.$_resolve(tinymce.activeEditor)
       })
     },
     beforeDestroy () {
-      tinymce.remove()
+      this.$_promise.then(() => {
+        tinymce.remove()
+      })
     }
   }
 </script>
