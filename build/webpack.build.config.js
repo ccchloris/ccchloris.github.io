@@ -22,6 +22,7 @@ require('fs-extra').removeSync('./dist')
 
 config.output.filename = '[name].[chunkhash].js'
 config.module.loaders[1].query = '[name].[hash].[ext]'
+config.output.publicPath = 'https://o96kmzuzz.qnssl.com/'
 config.vue.html = htmlMinifierOptions
 
 config.plugins = [
