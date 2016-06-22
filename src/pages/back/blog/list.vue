@@ -20,6 +20,8 @@
         <td v-text="article.createTime | toDate"></td>
         <td v-text="article.lastModifyTime | toDate"></td>
         <td>
+          <a target="_blank" v-link="{name:'文章详情',params:{id:article['.key']}}">查看</a>
+          <a v-link="{name: '编辑文章', params: {id: article['.key']}}">编辑</a>
           <a href="#" @click.prevent="del(article['.key'])">删除</a>
         </td>
       </tr>
