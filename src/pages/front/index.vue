@@ -87,7 +87,7 @@
 
 <style lang="sass" rel="stylesheet/scss">
   %section {
-    padding-top: 180px;
+    padding-top: 130px;
 
     & h1 {
       margin-bottom: 110px;

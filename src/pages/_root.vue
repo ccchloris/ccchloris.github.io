@@ -57,14 +57,6 @@
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
-  // 全局样式
-  body, html {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
   body {
     font-family: "Times New Roman", "Microsoft YaHei", Times, serif;
   }
