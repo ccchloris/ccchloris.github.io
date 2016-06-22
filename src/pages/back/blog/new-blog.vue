@@ -4,6 +4,9 @@
       <li><a v-link="{name:'后台文章列表'}">文章管理</a></li>
       <li class="active" v-text="id ? '编辑文章' : '写文章'"></li>
     </ol>
+
+    <p><a target="_blank" href="https://github.com/ccchloris/ccchloris.github.io/blob/dev/docs/manual/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87.md#readme">不知道怎么上传图片?</a></p>
+
     <form @submit.prevent="submit">
       <div class="form-group">
         <input type="text"
