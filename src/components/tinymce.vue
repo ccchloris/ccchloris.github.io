@@ -4,6 +4,23 @@
 </template>
 
 <script type="text/babel">
+  import load from '../utils/load-script'
+
+  let uid = 0
+  const idPrefix = 'tinymce'
+
+  function createId () {
+    uid += 1
+    return idPrefix + uid
+  }
+
+  function getTinymce () {
+    return load('https://cdn.tinymce.com/4/tinymce.min.js').then(() => {
+      getTinymce = () => Promise.resolve(window.tinymce)
+      return window.tinymce
+    })
+  }
+
   export default {
     props: {
       height: {
@@ -34,27 +51,31 @@
       })
     },
     ready () {
-      tinymce.init({
-        selector: 'textarea',
-        height: this.height,
-        theme: 'modern',
-        plugins: [
-          'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-          'searchreplace visualblocks visualchars code fullscreen',
-          'insertdatetime media nonbreaking save table contextmenu directionality',
-          'template paste textcolor colorpicker textpattern imagetools'
-        ],
-        toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-        toolbar2: 'print preview media | forecolor backcolor',
-        image_advtab: true,
-        templates: [
-          {
-            title: '点击购买',
-            content: '<div class="buy-it"><div class="info"><div class="value">￥63.00</div><div class="likes">2345人喜欢</div></div><div><a href="填写链接" target="_blank">查看详情</a></div>'
-          }
-        ]
-      }).then(() => {
-        this.$_resolve(tinymce.activeEditor)
+      const ID = createId()
+      this.$el.id = ID
+      getTinymce().then(tinymce => {
+        tinymce.init({
+          selector: '#' + ID,
+          height: this.height,
+          theme: 'modern',
+          plugins: [
+            'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            'searchreplace visualblocks visualchars code fullscreen',
+            'insertdatetime media nonbreaking save table contextmenu directionality',
+            'template paste textcolor colorpicker textpattern imagetools'
+          ],
+          toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+          toolbar2: 'print preview media | forecolor backcolor',
+          image_advtab: true,
+          templates: [
+            {
+              title: '点击购买',
+              content: '<div class="buy-it"><div class="info"><div class="value">￥63.00</div><div class="likes">2345人喜欢</div></div><div><a href="填写链接" target="_blank">查看详情</a></div>'
+            }
+          ]
+        }).then(editors => {
+          this.$_resolve(editors[0])
+        })
       })
     },
     beforeDestroy () {
