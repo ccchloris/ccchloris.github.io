@@ -14,7 +14,7 @@
     return idPrefix + uid
   }
 
-  function getTinymce () {
+  let getTinymce = function () {
     return load('https://cdn.tinymce.com/4/tinymce.min.js').then(() => {
       getTinymce = () => Promise.resolve(window.tinymce)
       return window.tinymce

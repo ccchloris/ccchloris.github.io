@@ -6,7 +6,7 @@
 export default function (url) {
   const script = document.createElement('script')
   script.src = url
-  return new Promise((resolve,reject) => {
+  return new Promise((resolve, reject) => {
     script.onload = resolve
     script.onerror = reject
     document.head.appendChild(script)
