@@ -45,8 +45,25 @@
     <section id="index-two">
       <h1>还你水当当的婴儿肌</h1>
       <div class="img-box">
-        <!--<img src="" alt="">-->
-        <div style="height:500px;background: gray">placeholder</div>
+        <div class="need-masker">
+          <img src="./index-images/3.pic.jpg" alt="">
+          <div class="img-masker">
+            <div>LINE FRIENDS</div>
+            <div>———— 咖啡店 ————</div>
+          </div>
+        </div>
+        <div class="second-box">
+          <div>
+            <img src="./index-images/1.pic.png" alt="">
+          </div>
+          <div class="need-masker">
+            <img src="./index-images/2.pic.jpg" alt="">
+            <div class="img-masker">
+              <div>LINE FRIENDS</div>
+              <div>———— 咖啡店 ————</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="bb"></div>
     </section>
@@ -95,6 +112,29 @@
     }
   }
 
+  $maskHeight: 60px;
+  %img-masker {
+    overflow: hidden;
+
+    & .img-masker {
+      height: $maskHeight;
+      background-color: rgba(0, 0, 0, 0.32);
+      color: #fff;
+      text-align: center;
+      transition: all 0.2s;
+      padding-top: 3px;
+
+      div:first-child {
+        font-size: 24px;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 5px;
+      }
+      div:last-child {
+        font-size: 12px;
+      }
+    }
+  }
+
   #index-one {
     @extend %section;
     /*<!--$imgW: 270px;-->*/
@@ -113,31 +153,18 @@
       }
     }
 
-    @mixin img-item($imgHeight) {
+    // 五格图片的公用样式
+    %img {
       cursor: pointer;
       background-size: cover;
       background-position: center center;
-      overflow: hidden;
-      height: $imgHeight;
-      $maskHeight: 60px;
-      .img-masker {
-        height: $maskHeight;
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-        opacity: 0.5;
-        transition: transform 0.2s;
-        transform: translateY($imgHeight);
-        padding-top: 3px;
+    }
 
-        div:first-child {
-          font-size: 24px;
-          font-family: "Open Sans", sans-serif;
-          letter-spacing: 5px;
-        }
-        div:last-child {
-          font-size: 12px;
-        }
+    // 五格图片的 img-masker 的动效
+    @mixin img-item($imgHeight) {
+      height: $imgHeight;
+      .img-masker {
+        transform: translateY($imgHeight);
       }
 
       &:hover > div {
@@ -146,6 +173,8 @@
     }
 
     .img {
+      @extend %img;
+      @extend %img-masker;
       @include img-item($imgH);
       &:first-child {
         margin-bottom: $space;
@@ -153,6 +182,8 @@
     }
 
     .big-img {
+      @extend %img;
+      @extend %img-masker;
       @include img-item($imgH * 2 + $space);
     }
 
@@ -187,6 +218,30 @@
 
     .img-box {
       padding: 70px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .second-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .need-masker {
+        @extend %img-masker;
+        position: relative;
+
+        .img-masker {
+          position: absolute;
+          bottom: -$maskHeight;
+          left: 0;
+          width: 100%;
+        }
+
+        &:hover .img-masker {
+          bottom: 0;
+        }
+      }
 
       img {
         width: 100%;

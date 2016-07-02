@@ -17,17 +17,20 @@
 </template>
 
 <style lang="sass" rel="stylesheet/scss">
-  /*#header-image {*/
-    /*height: 300px;*/
-  /*}*/
+  #header-image {
+    background: url("./index-images/5.pic.jpg") center center;
+    background-size: cover;
+    height: 300px;
+  }
 
   #nav {
     $height: 60px;
     height: $height;
 
     .header-nav {
-      background-color: #2a2a2a;
+      background: url(./index-images/4.pic.jpg) center center;
       width: 100%;
+      z-index: 9999;
 
       ul {
         margin: 0;

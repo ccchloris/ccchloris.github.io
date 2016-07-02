@@ -21,8 +21,8 @@ const htmlMinifierOptions = {
 require('fs-extra').removeSync('./dist')
 
 config.output.filename = '[name].[chunkhash].js'
-config.module.loaders[1].query.name = '[name].[hash].[ext]'
 config.output.publicPath = 'https://o96kmzuzz.qnssl.com/'
+config.module.loaders[1].query.name = '[name].[hash].[ext]'
 config.vue.html = htmlMinifierOptions
 
 config.plugins = [
@@ -31,7 +31,7 @@ config.plugins = [
     template: './src/index.html',
     minify: htmlMinifierOptions
   }),
-  new ExtractTextPlugin('[name].[chunkhash].css'),
+  new ExtractTextPlugin('[name].[contenthash].css'),
   new webpack.DefinePlugin({
     'process.env': { NODE_ENV: '"production"' }
   }),
