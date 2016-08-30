@@ -9,6 +9,6 @@
 <style lang="sass" rel="stylesheet/scss">
   #footer {
     height: 110px;
-    background-color: #000;
+    background: url("./index-images/daohang2.jpg");
   }
 </style>

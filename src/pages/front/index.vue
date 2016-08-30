@@ -74,21 +74,21 @@
       <div class="list">
         <div class="item">
           <div class="img">
-            <img src="./index-images/1.jpg" alt="">
+            <img src="./index-images/web_01.jpg" alt="">
           </div>
           <h4>标题</h4>
           <div>日期</div>
         </div>
         <div class="item">
           <div class="img">
-            <img src="./index-images/1.jpg" alt="">
+            <img src="./index-images/web_02.jpg" alt="">
           </div>
           <h4>标题</h4>
           <div>日期</div>
         </div>
         <div class="item">
           <div class="img">
-            <img src="./index-images/1.jpg" alt="">
+            <img src="./index-images/web_03.jpg" alt="">
           </div>
           <h4>标题</h4>
           <div>日期</div>
