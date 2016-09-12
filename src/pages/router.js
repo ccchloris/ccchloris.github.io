@@ -27,6 +27,10 @@ router.map({
       '/post/:id': {
         name: '文章详情',
         component: require('./front/detail.vue')
+      },
+      '/images': {
+        name: '图片列表',
+        component: require('./front/images-list.vue')
       }
     }
   },

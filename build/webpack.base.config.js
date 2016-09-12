@@ -21,7 +21,7 @@ module.exports = {
         test: /\.(woff2?|ttf|png|svg|eot|jpe?g|gif|bmp)$/,
         loader: 'file-loader',
         query: {
-          name: '[name].[ext]'
+          name: '[path][name].[ext]'
         }
       },
       {

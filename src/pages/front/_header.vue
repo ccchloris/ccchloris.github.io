@@ -12,16 +12,16 @@
             <div class="sub-menus">
               <ul class="list-unstyled">
                 <li>
-                  <a href="#">视频</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'videos' } }">视频</a>
                 </li>
                 <li>
-                  <a href="#">夏日</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'summer' } }">夏日</a>
                 </li>
                 <li>
-                  <a href="#">穿衣</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'clothing' } }">穿衣</a>
                 </li>
                 <li>
-                  <a href="#">美食</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'foods' } }">美食</a>
                 </li>
               </ul>
             </div>
@@ -42,7 +42,7 @@
   }
 
   #nav {
-    $height: 60px;
+    $height: 45px;
     height: $height;
 
     .header-nav {
@@ -91,7 +91,7 @@
             color: #fff;
             font-size: 18px;
 
-            &:hover {
+            &:hover, &:active, &:visited {
               text-decoration: none;
             }
           }
