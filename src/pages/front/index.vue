@@ -1,7 +1,7 @@
 <template>
   <main class="wrap">
     <section id="index-one">
-      <h1 class="text-center">———— 萌萌少女心 ————</h1>
+      <h1 class="text-center">——— 萌萌少女心 ———</h1>
 
       <div class="center-block img-box">
         <div>
@@ -21,7 +21,7 @@
         <div>
           <div class="big-img img5" v-link="{name:'文章详情',params:{id:'-KKMXm8mObPh8zlCBktu'}}">
             <div class="img-masker">
-              <div>牛仔背心裙</div>
+              <div>印花连衣裙</div>
               <div>———— 服装 ————</div>
             </div>
           </div>
@@ -33,7 +33,7 @@
               <div>———— 小物 ————</div>
             </div>
           </div>
-          <div class="img img4" v-link="{name:'文章详情',params:{id:'-KKMYA08pfLAKefyDGBK'}}">
+          <div class="img img4" v-link="{ name: '文章详情', params: { id: '-KKMYA08pfLAKefyDGBK' } }">
             <div class="img-masker">
               <div>CHLOE</div>
               <div>———— 香水 ————</div>
@@ -45,11 +45,13 @@
     <section id="index-two">
       <h1>还你水当当的婴儿肌</h1>
       <div class="img-box">
-        <div class="need-masker">
-          <img src="./index-images/3.pic.jpg" alt="">
+        <div class="need-masker big-img">
+          <a v-link="{ name: '文章详情', params: { id: '-KKMYOuxM8iDThhOfOF3' } }">
+            <img src="./index-images/3.pic.jpg" alt="">
+          </a>
           <div class="img-masker">
-            <div>LINE FRIENDS</div>
-            <div>———— 咖啡店 ————</div>
+            <div>FRESH</div>
+            <div>———— 护肤 ————</div>
           </div>
         </div>
         <div class="second-box">
@@ -57,54 +59,58 @@
             <img src="./index-images/1.pic.png" alt="">
           </div>
           <div class="need-masker">
-            <img src="./index-images/2.pic.jpg" alt="">
+            <a v-link="{ name: '文章详情', params: { id: '-KNBjrZlDPvTMfAZghwd' } }">
+              <img src="./index-images/2.pic.jpg" alt="">
+            </a>
             <div class="img-masker">
-              <div>LINE FRIENDS</div>
-              <div>———— 咖啡店 ————</div>
+              <div>L'OCCITANE</div>
+              <div>———— 护肤 ————</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bb"></div>
+      <!--<div class="bb"></div>-->
     </section>
     <section id="index-3">
       <h1>
-        News & Events
+        ——— 下午茶 ———
       </h1>
       <div class="list">
         <div class="item">
-          <div class="img">
-            <img src="./index-images/web_01.jpg" alt="">
-          </div>
-          <h4>标题</h4>
-          <div>日期</div>
+          <a v-link="{ name: '图片', query: { name: 'dt' } }">
+            <div class="img">
+              <div></div>
+              <img src="./index-images/web_01.jpg">
+            </div>
+          </a>
+          <a v-link="{ name: '图片', query: { name: 'dt' } }">草莓蛋挞</a>
         </div>
         <div class="item">
-          <div class="img">
-            <img src="./index-images/web_02.jpg" alt="">
-          </div>
-          <h4>标题</h4>
-          <div>日期</div>
+          <a v-link="{ name: '图片', query: { name: 'rl' } }">
+            <div class="img">
+              <div></div>
+              <img src="./index-images/web_02.jpg">
+            </div>
+          </a>
+          <a v-link="{ name: '图片', query: { name: 'rl' } }">乳酪蛋糕</a>
         </div>
         <div class="item">
-          <div class="img">
-            <img src="./index-images/web_03.jpg" alt="">
-          </div>
-          <h4>标题</h4>
-          <div>日期</div>
+          <a v-link="{ name: '图片', query: { name: 'bg' } }">
+            <div class="img">
+              <div></div>
+              <img src="./index-images/web_03.jpg" v-link="{ name: '图片', query: { name: 'bg' } }">
+            </div>
+          </a>
+          <a v-link="{ name: '图片', query: { name: 'bg' } }">蔓越梅饼干</a>
         </div>
       </div>
     </section>
   </main>
 </template>
 
-<script type="text/babel">
-  export default {}
-</script>
-
 <style lang="sass" rel="stylesheet/scss">
   %section {
-    padding-top: 130px;
+    padding-top: 100px;
 
     & h1 {
       margin-bottom: 110px;
@@ -208,12 +214,17 @@
     @extend %section;
     $border: 2px solid #000;
 
+    .big-img {
+      width: 60%;
+      margin-right: 5%;
+    }
+
     h1 {
       font-size: 30px;
       padding: 15px 0;
       border-top: $border;
       border-bottom: $border;
-      margin-bottom: 0;
+      margin-bottom: 35px;
     }
 
     .img-box {
@@ -256,6 +267,39 @@
   #index-3 {
     @extend %section;
     padding-bottom: 200px;
+    padding-top: 20px;
+
+    a {
+      font-weight: bold;
+      font-size: 24px;
+      color: #000;
+
+      &:hover {
+        text-decoration: none;
+        color: #eacdc4;
+      }
+    }
+
+    .img {
+      margin-bottom: 10px;
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+
+      &:hover div {
+        opacity: 0.3;
+      }
+    }
+
     .list {
       display: flex;
       flex-wrap: wrap;

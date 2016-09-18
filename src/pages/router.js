@@ -31,6 +31,14 @@ router.map({
       '/images': {
         name: '图片列表',
         component: require('./front/images-list.vue')
+      },
+      '/image': {
+        name: '图片',
+        component: require('./front/image.vue')
+      },
+      '/tl': {
+        name: '文字生活',
+        component: require('./front/text-life.vue')
       }
     }
   },

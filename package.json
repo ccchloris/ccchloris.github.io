@@ -5,7 +5,7 @@
     "url": "git+https://github.com/ccchloris/ccchloris.github.io.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
+    "start": "webpack-dev-server --inline --config build/webpack.dev.config.js",
     "build": "webpack --config build/webpack.build.config.js",
     "lint": "eslint --ignore-pattern '/dist/' \"**/*.{js,vue}\"",
     "deploy": "npm run lint && npm run build && gh-pages -b master -r https://github.com/ccchloris/ccchloris.github.io.git -d dist"

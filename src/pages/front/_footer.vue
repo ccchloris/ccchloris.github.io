@@ -8,7 +8,7 @@
 
 <style lang="sass" rel="stylesheet/scss">
   #footer {
-    height: 110px;
-    background: url("./index-images/daohang2.jpg");
+    /*height: 110px;*/
+    /*background: url("./index-images/daohangnew2.jpg");*/
   }
 </style>

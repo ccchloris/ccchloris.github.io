@@ -12,22 +12,22 @@
             <div class="sub-menus">
               <ul class="list-unstyled">
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'videos' } }">视频</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'videos' } }">原创视频</a>
                 </li>
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'summer' } }">夏日</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'summer' } }">清爽夏日</a>
                 </li>
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'clothing' } }">穿衣</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'clothing' } }">秋风微凉</a>
                 </li>
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'foods' } }">美食</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'foods' } }">一日之晨</a>
                 </li>
               </ul>
             </div>
           </li>
-          <li><a href="#">文字生活</a></li>
-          <li><a href="#">美丽生活</a></li>
+          <li><a v-link="{ name: '文字生活', query: { name: 'text' } }">文字生活</a></li>
+          <li><a v-link="{ name: '文字生活', query: { name: 'mei' } }">美丽生活</a></li>
         </ul>
       </div>
     </div>
@@ -91,7 +91,7 @@
             color: #fff;
             font-size: 18px;
 
-            &:hover, &:active, &:visited {
+            &:hover, &:active, &:visited, &:focus {
               text-decoration: none;
             }
           }
