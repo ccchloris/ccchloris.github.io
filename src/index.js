@@ -1,3 +1,5 @@
+import './assets/fontello/css/fontello.css'
+
 // eslint-disable-next-line no-extend-native
 Promise.prototype.finally = function (callback) {
   return this.then(value => {
