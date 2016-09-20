@@ -3,8 +3,8 @@
     <div v-if="article" class="article">
       <h1 v-text="article.title"></h1>
       <!--<div>-->
-        <!--创建时间: <span v-text="article.createTime | toDate"></span><br>-->
-        <!--最后修改时间: <span v-text="article.lastModifyTime | toDate"></span>-->
+      <!--创建时间: <span v-text="article.createTime | toDate"></span><br>-->
+      <!--最后修改时间: <span v-text="article.lastModifyTime | toDate"></span>-->
       <!--</div>-->
       <div class="content" v-html="article.content"></div>
 
@@ -36,17 +36,24 @@
 
 <style lang="sass" rel="stylesheet/scss">
   #article-detail {
+    padding-top: 50px;
 
     .article {
       width: 600px;
       margin: 0 auto;
 
+      h1 {
+        font-family: sans-serif;
+      }
+
       .content {
         margin-top: 20px;
         margin-bottom: 50px;
+        font-size: 16px;
+        color: #666;
 
         img {
-          width: 100%;
+          width: 70%;
           height: auto !important;
         }
       }

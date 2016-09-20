@@ -8,7 +8,7 @@
         <i class="icon-weibo"></i>
         <i class="icon-mail"></i>
       </p>
-      <p>Copyright &copy; 2016 CHLORIS</p>
+      <p>Copyright &copy; 2016 Chloris</p>
       <p>Maintain by <a href="http://www.limingkai.cn">Mike Lee</a></p>
     </div>
   </footer>
@@ -28,6 +28,10 @@
 
       .one {
         font-size: 30px;
+      }
+
+      a {
+        color: #000;
       }
     }
   }
