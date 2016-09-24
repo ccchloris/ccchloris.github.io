@@ -8,12 +8,9 @@
         <ul class="list-unstyled menus-box">
           <li><a href="#">主页</a></li>
           <li>
-            <a href="#">寻找生活</a>
+            <a href="#">爱生活</a>
             <div class="sub-menus">
               <ul class="list-unstyled">
-                <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'videos' } }">原创视频</a>
-                </li>
                 <li>
                   <a v-link="{ name: '图片列表', query: { name: 'summer' } }">清爽夏日</a>
                 </li>
@@ -26,8 +23,8 @@
               </ul>
             </div>
           </li>
-          <li><a v-link="{ name: '文字生活', query: { name: 'text' } }">文字生活</a></li>
-          <li><a v-link="{ name: '文字生活', query: { name: 'mei' } }">美丽生活</a></li>
+          <li><a v-link="{ name: '文字生活', query: { name: 'text' } }">看世界</a></li>
+          <li><a v-link="{ name: '图片列表', query: { name: 'videos' } }">原创视频</a></li>
         </ul>
       </div>
     </div>
