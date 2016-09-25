@@ -1,7 +1,7 @@
 <template>
   <main class="wrap">
     <section id="index-one">
-      <h1 class="text-center">——— 萌萌少女心 ———</h1>
+      <h1 class="text-center two-lines">萌萌少女心</h1>
 
       <div class="center-block img-box">
         <div>
@@ -69,12 +69,9 @@
           </div>
         </div>
       </div>
-      <!--<div class="bb"></div>-->
     </section>
     <section id="index-3">
-      <h1>
-        ——— 下午茶 ———
-      </h1>
+      <h1 class="two-lines">下午茶</h1>
       <div class="list">
         <div class="item">
           <a v-link="{ name: '图片', query: { name: 'dt' } }">
@@ -212,7 +209,7 @@
 
   #index-two {
     @extend %section;
-    $border: 2px solid #000;
+    $border: 1px solid #000;
 
     .big-img {
       width: 60%;
@@ -257,10 +254,6 @@
       img {
         width: 100%;
       }
-    }
-
-    .bb {
-      border-bottom: $border;
     }
   }
 
