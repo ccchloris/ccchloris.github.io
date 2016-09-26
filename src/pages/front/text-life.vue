@@ -1,9 +1,11 @@
 <template>
   <div class="wrap" id="text-life">
-    <div class="box" v-for="list in $LIST">
-      <a v-link="getLink(list.id)">
-        <img :src="list.image">
-      </a>
+    <div class="boxes">
+      <div class="box" v-for="list in $LIST">
+        <a v-link="getLink(list.id)">
+          <img :src="list.image">
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -12,15 +14,15 @@
   const LIST = {
     text: [
       {
-        image: require('./images-list/wen01.jpg'),
+        image: require('./images-list/web_01.jpg'),
         id: '-KQphlf5tMPjfxLuv1hd'
       },
       {
-        image: require('./images-list/wen02.jpg'),
+        image: require('./images-list/wenz2.jpg'),
         id: '-KQproYSxDa13HjseOyG'
       },
       {
-        image: require('./images-list/wen03.png'),
+        image: require('./images-list/wenz3.jpg'),
         id: '-KQq2iPdo6MbSLEgwEU6'
       }
     ],
@@ -50,12 +52,20 @@
 <style lang="sass" rel="stylesheet/scss">
   #text-life {
     text-align: center;
+    margin-top: 50px;
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-between;
+    }
 
     .box {
+      flex-basis: 30%;
       margin: 20px 0;
 
       img {
-        width: 350px;
+        width: 100%;
       }
     }
   }
