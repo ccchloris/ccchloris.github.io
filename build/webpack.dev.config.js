@@ -9,7 +9,7 @@ config.plugins.push(new webpack.DefinePlugin({
     NODE_ENV: '"development"'
   }
 }))
-config.plugins.push(new OpenPack({ lan: true }))
+config.plugins.push(new OpenPack())
 config.devServer = {
   noInfo: true,
   host: '0.0.0.0',
