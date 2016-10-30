@@ -1,31 +1,5 @@
 <template>
   <div class="wrap" id="images-list">
-    <div class="videos" v-if="isVideos">
-      <div>
-        <embed
-            height="600"
-            width="900"
-            quality="high"
-            allowfullscreen="true"
-            type="application/x-shockwave-flash"
-            src="http://static.hdslb.com/miniloader.swf"
-            flashvars="aid=6244550&page=1"
-            pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
-        </embed>
-      </div>
-      <div>
-        <embed
-            height="600"
-            width="900"
-            quality="high"
-            allowfullscreen="true"
-            type="application/x-shockwave-flash"
-            src="http://static.hdslb.com/miniloader.swf"
-            flashvars="aid=6070052&page=1"
-            pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
-        </embed>
-      </div>
-    </div>
     <h2 class="text-center">—— {{ config.title }} ——</h2>
     <div class="images">
       <div
@@ -87,12 +61,6 @@
     route: {
       data () {
         const { name } = this.$route.query
-        if (name === 'videos') {
-          return {
-            isVideos: true,
-            config: {}
-          }
-        }
         return {
           config: IMAGES_MAP[name] || {},
           isVideos: false
@@ -101,8 +69,7 @@
     },
     data () {
       return {
-        config: {},
-        isVideos: false
+        config: {}
       }
     }
   }

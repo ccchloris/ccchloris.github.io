@@ -24,7 +24,7 @@
             </div>
           </li>
           <li><a v-link="{ name: '文字生活', query: { name: 'text' } }">看世界</a></li>
-          <li><a v-link="{ name: '图片列表', query: { name: 'videos' } }">原创视频</a></li>
+          <li><a v-link="{ name: '文字生活', query: { name: 'video' } }">原创视频</a></li>
         </ul>
       </div>
     </div>

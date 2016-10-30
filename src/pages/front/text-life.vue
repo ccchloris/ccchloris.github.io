@@ -31,6 +31,16 @@
         image: require('./images-list/201505291135588371388.jpg'),
         id: '-KQg7nU0Vodpk4c6xGLO'
       }
+    ],
+    video: [
+      {
+        image: require('./images-list/web_01.jpg'),
+        id: '-KVLJQvl678vTyffuEcq'
+      },
+      {
+        image: require('./images-list/wenz2.jpg'),
+        id: '-KVLJhHyYnb6lXwKqdpb'
+      }
     ]
   }
   export default {
@@ -57,7 +67,7 @@
     .boxes {
       display: flex;
       flex-wrap: wrap;
-      justify-content:space-between;
+      justify-content: space-between;
     }
 
     .box {
