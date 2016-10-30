@@ -112,6 +112,7 @@
     & h1 {
       margin-bottom: 110px;
       text-align: center;
+      font-weight: normal;
     }
   }
 
