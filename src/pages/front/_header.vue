@@ -34,102 +34,81 @@
 <style lang="sass" rel="stylesheet/scss">
   #header-image {
     background: url("./index-images/5.pic.jpg") center center;
-    background-size: cover;
+    background-size: auto 102%; // 防止底部出现白条
     height: 300px;
   }
 
   #nav {
-    $height: 45px;
+    $height: 40px;
     height: $height;
 
     .header-nav {
-      background: url(./index-images/4.pic.jpg) center center;
+      background: #f2f2f2;
       width: 100%;
       z-index: 9999;
+    }
 
-      .menus-box {
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: $height;
+    .menus-box {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: $height;
 
-        > li {
-          flex-grow: 1;
-          text-align: center;
+      a {
+        color: #7f7f7f;
+        font-size: 16px;
+
+        &:hover, &:active, &:visited, &:focus {
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: #ef9781;
+        }
+      }
+
+      .sub-menus {
+        position: absolute;
+        top: $height;
+        left: 25%;
+        width: 60%;
+
+        ul {
+          height: 0;
+          overflow: hidden;
+          transition: all 0.2s;
           position: relative;
-          height: $height;
-          line-height: $height;
+          left: 10px;
+        }
 
-          &::after,
-          &::before {
-            $lineHeight: 2px;
-            display: block;
-            position: absolute;
-            top: ($height - $lineHeight) / 2;
-            content: '';
-            opacity: 0;
-            width: 20px;
-            height: $lineHeight;
-            background-color: #fff;
-            transition: all 0.2s;
-          }
+        li {
+          text-align: left;
+          background: #f9f9f9;
 
-          $m: 65px;
-          &:after {
-            right: $m;
-          }
-
-          &:before {
-            left: $m;
+          &:hover {
+            background: #f2f2f2;
           }
 
           a {
-            color: #fff;
-            font-size: 18px;
-
-            &:hover, &:active, &:visited, &:focus {
-              text-decoration: none;
-            }
+            display: block;
+            padding-left: 20px;
+            height: $height;
+            line-height: $height;
           }
+        }
+      }
 
-          $liHeight: 44px;
-          .sub-menus {
-            position: absolute;
-            top: $height;
-            left: 25%;
-            width: 50%;
+      > li {
+        flex-grow: 1;
+        text-align: center;
+        position: relative;
+        height: $height;
+        line-height: $height;
 
-            ul {
-              height: 0;
-              overflow: hidden;
-              transition: all 0.2s;
-
-              li {
-                height: $liHeight;
-                line-height: $liHeight;
-                background-color: #000;
-                color: #fff;
-              }
-            }
-          }
-
-          &:hover {
-            .sub-menus ul {
-              height: $liHeight * 4;
-            }
-
-            &:after,
-            &:before {
-              opacity: 1;
-            }
-
-            &:before {
-              left: 50px;
-            }
-            &:after {
-              right: 50px;
-            }
+        &:hover {
+          .sub-menus ul {
+            height: $height * 4;
           }
         }
       }
