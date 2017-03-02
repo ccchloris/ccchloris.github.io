@@ -34,11 +34,11 @@
     ],
     video: [
       {
-        image: require('./images-list/web_01.jpg'),
+        image: require('./images-list/shi1.jpg'),
         id: '-KVLJQvl678vTyffuEcq'
       },
       {
-        image: require('./images-list/wenz2.jpg'),
+        image: require('./images-list/shi3.jpg'),
         id: '-KVLJhHyYnb6lXwKqdpb'
       }
     ]
