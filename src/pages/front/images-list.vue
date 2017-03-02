@@ -40,20 +40,6 @@
         require('./images-list/foods/8.jpeg'),
         require('./images-list/foods/9.jpeg')
       ]
-    },
-    clothing: {
-      title: 'c',
-      images: [
-        require('./images-list/clothing/chuanyi01.jpg'),
-        require('./images-list/clothing/chuanyi02.jpg'),
-        require('./images-list/clothing/chuanyi03.jpg'),
-        require('./images-list/clothing/chuanyi04.jpg'),
-        require('./images-list/clothing/chuanyi05.jpg'),
-        require('./images-list/clothing/chuanyi06.jpg'),
-        require('./images-list/clothing/chuanyi07.jpg'),
-        require('./images-list/clothing/chuanyi08.jpg'),
-        require('./images-list/clothing/chuanyi09.jpg')
-      ]
     }
   }
 

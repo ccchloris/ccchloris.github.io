@@ -15,9 +15,6 @@
                   <a v-link="{ name: '图片列表', query: { name: 'summer' } }">清爽夏日</a>
                 </li>
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'clothing' } }">秋风微凉</a>
-                </li>
-                <li>
                   <a v-link="{ name: '图片列表', query: { name: 'foods' } }">一日之晨</a>
                 </li>
               </ul>
