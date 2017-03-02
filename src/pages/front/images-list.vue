@@ -28,7 +28,7 @@
       ]
     },
     foods: {
-      title: '一日之晨',
+      title: '认真吃早餐',
       images: [
         require('./images-list/foods/1.jpeg'),
         require('./images-list/foods/2.jpeg'),
@@ -63,9 +63,10 @@
 
 <style lang="sass" rel="stylesheet/scss">
   #images-list {
+    margin-bottom: 100px;
 
     h2 {
-      margin: 50px 0;
+      margin: 100px 0;
     }
 
     .images {

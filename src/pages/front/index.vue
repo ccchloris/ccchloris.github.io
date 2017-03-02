@@ -80,7 +80,6 @@
               <img src="./index-images/web_01.jpg">
             </div>
           </a>
-          <a v-link="{ name: '图片', query: { name: 'dt' } }">草莓蛋挞</a>
         </div>
         <div class="item">
           <a v-link="{ name: '图片', query: { name: 'rl' } }">
@@ -89,7 +88,6 @@
               <img src="./index-images/web_02.jpg">
             </div>
           </a>
-          <a v-link="{ name: '图片', query: { name: 'rl' } }">乳酪蛋糕</a>
         </div>
         <div class="item">
           <a v-link="{ name: '图片', query: { name: 'bg' } }">
@@ -98,7 +96,6 @@
               <img src="./index-images/web_03.jpg" v-link="{ name: '图片', query: { name: 'bg' } }">
             </div>
           </a>
-          <a v-link="{ name: '图片', query: { name: 'bg' } }">蔓越梅饼干</a>
         </div>
       </div>
     </section>
@@ -260,7 +257,7 @@
 
   #index-3 {
     @extend %section;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-top: 20px;
 
     a {
