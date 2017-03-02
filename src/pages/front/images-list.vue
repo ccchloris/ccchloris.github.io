@@ -1,6 +1,6 @@
 <template>
   <div class="wrap" id="images-list">
-    <h2 class="text-center">—— {{ config.title }} ——</h2>
+    <h2 class="text-center two-lines">{{ config.title }}</h2>
     <div class="images">
       <div
           class="image"
@@ -28,7 +28,7 @@
       ]
     },
     foods: {
-      title: 'b',
+      title: '一日之晨',
       images: [
         require('./images-list/foods/1.jpeg'),
         require('./images-list/foods/2.jpeg'),
@@ -63,6 +63,11 @@
 
 <style lang="sass" rel="stylesheet/scss">
   #images-list {
+
+    h2 {
+      margin: 50px 0;
+    }
+
     .images {
       display: flex;
       flex-wrap: wrap;
