@@ -58,7 +58,7 @@
   @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
   body {
-    font-family: "Times New Roman", "Microsoft YaHei", Times, serif;
+    font-family: "PingFang SC", "Microsoft YaHei", Times, serif;
   }
 
   .wrap {

@@ -1,7 +1,7 @@
 <template>
   <main class="wrap">
     <section id="index-one">
-      <h1 class="text-center two-lines">萌萌少女心</h1>
+      <!--<h1 class="text-center two-lines">萌萌少女心</h1>-->
 
       <div class="center-block img-box">
         <div>
@@ -331,12 +331,12 @@
 
     h1 {
       text-transform: uppercase;
-      font-size: 20px;
-      margin-bottom: 40px;
+      font-size: 14px;
+      margin-bottom: 30px;
 
       &:after,
       &:before {
-        width: 310px;
+        width: 100px;
       }
     }
 
