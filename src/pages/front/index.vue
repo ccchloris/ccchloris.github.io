@@ -99,6 +99,25 @@
         </div>
       </div>
     </section>
+    <section id="index-4">
+      <h1 class="two-lines">follow on instagram</h1>
+      <div class="dsn-images">
+        <div>
+          <img src="./index-images/dsn/dsn1.jpeg">
+        </div>
+        <div>
+          <img src="./index-images/dsn/dsn2.jpeg"></div>
+        <!--<div>
+        <img src="./index-images/dsn/dsn3.jpeg">
+          </div>-->
+        <div>
+          <img src="./index-images/dsn/dsn4.jpeg"></div>
+        <div>
+          <img src="./index-images/dsn/dsn5.jpeg"></div>
+        <!--<div>-->
+        <!--<img src="./index-images/dsn/dsn6.jpeg"></div>-->
+      </div>
+    </section>
   </main>
 </template>
 
@@ -127,7 +146,7 @@
 
       div:first-child {
         font-size: 24px;
-        font-family: "Open Sans", sans-serif;
+        font-family: sans-serif;
         letter-spacing: 5px;
       }
       div:last-child {
@@ -302,6 +321,44 @@
         img {
           width: 100%;
         }
+      }
+    }
+  }
+
+  #index-4 {
+    @extend %section;
+    padding-top: 0;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 40px;
+
+      &:after,
+      &:before {
+        width: 310px;
+      }
+    }
+
+    .dsn-images {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > div {
+        flex-basis: 25%;
+        margin: 0 2px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
