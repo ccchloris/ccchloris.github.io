@@ -1,7 +1,7 @@
 <template>
   <div class="wrap" id="text-life">
     <div class="boxes">
-      <div class="box" v-for="list in $LIST">
+      <div class="box" v-for="list in lists">
         <a v-link="getLink(list.id)">
           <img :src="list.image">
         </a>
@@ -48,9 +48,17 @@
     ]
   }
   export default {
+    route: {
+      data () {
+        return {
+          lists: LIST[this.$route.query.name]
+        }
+      }
+    },
     data () {
-      this.$LIST = LIST[this.$route.query.name]
-      return {}
+      return {
+        lists: []
+      }
     },
     methods: {
       getLink (id) {
