@@ -103,19 +103,25 @@
       <h1 class="two-lines">follow on instagram</h1>
       <div class="dsn-images">
         <div>
-          <img src="./index-images/dsn/dsn1.jpeg">
+          <a href="https://www.instagram.com/p/BO2RP7cF-G_/" target="_blank">
+            <img src="./index-images/n0.jpeg">
+          </a>
         </div>
         <div>
-          <img src="./index-images/dsn/dsn2.jpeg"></div>
-        <!--<div>
-        <img src="./index-images/dsn/dsn3.jpeg">
-          </div>-->
+          <a href="https://www.instagram.com/p/BR2z7zCFrLh/" target="_blank">
+            <img src="./index-images/n1.jpeg">
+          </a>
+        </div>
         <div>
-          <img src="./index-images/dsn/dsn4.jpeg"></div>
+          <a href="https://www.instagram.com/p/BL_0e09BVVY/" target="_blank">
+            <img src="./index-images/n3.jpeg">
+          </a>
+        </div>
         <div>
-          <img src="./index-images/dsn/dsn5.jpeg"></div>
-        <!--<div>-->
-        <!--<img src="./index-images/dsn/dsn6.jpeg"></div>-->
+          <a href="https://www.instagram.com/p/BD0vWLxtmiQ/" target="_blank">
+            <img src="./index-images/n2.jpeg">
+          </a>
+        </div>
       </div>
     </section>
   </main>
