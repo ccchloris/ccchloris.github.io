@@ -1,6 +1,5 @@
 <template>
   <div class="wrap" id="images-list">
-    <h2 class="text-center two-lines">{{ config.title }}</h2>
     <div class="images">
       <div
           class="image"
@@ -73,6 +72,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-top: 100px;
 
       .image {
         flex-basis: 32%;

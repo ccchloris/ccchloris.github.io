@@ -8,11 +8,11 @@
         <ul class="list-unstyled menus-box">
           <li><a href="#">主页</a></li>
           <li>
-            <a href="#">爱生活</a>
+            <a href="javascript: void 0">爱生活</a>
             <div class="sub-menus">
               <ul class="list-unstyled">
                 <li>
-                  <a v-link="{ name: '图片列表', query: { name: 'summer' } }">清爽夏日</a>
+                  <a v-link="{ name: '图片列表', query: { name: 'summer' } }">夏日晚风里</a>
                 </li>
                 <li>
                   <a v-link="{ name: '图片列表', query: { name: 'foods' } }">一日之晨</a>

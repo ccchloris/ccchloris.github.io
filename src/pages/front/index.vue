@@ -102,26 +102,22 @@
     <section id="index-4">
       <h1 class="two-lines">follow on instagram</h1>
       <div class="dsn-images">
-        <div>
-          <a href="https://www.instagram.com/p/BO2RP7cF-G_/" target="_blank">
-            <img src="./index-images/n0.jpeg">
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/p/BR2z7zCFrLh/" target="_blank">
-            <img src="./index-images/n1.jpeg">
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/p/BL_0e09BVVY/" target="_blank">
-            <img src="./index-images/n3.jpeg">
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/p/BD0vWLxtmiQ/" target="_blank">
-            <img src="./index-images/n2.jpeg">
-          </a>
-        </div>
+        <a href="https://www.instagram.com/p/BO2RP7cF-G_/" target="_blank">
+          <div></div>
+          <img src="./index-images/n0.jpeg">
+        </a>
+        <a href="https://www.instagram.com/p/BR2z7zCFrLh/" target="_blank">
+          <div></div>
+          <img src="./index-images/n1.jpeg">
+        </a>
+        <a href="https://www.instagram.com/p/BL_0e09BVVY/" target="_blank">
+          <div></div>
+          <img src="./index-images/n3.jpeg">
+        </a>
+        <a href="https://www.instagram.com/p/BD0vWLxtmiQ/" target="_blank">
+          <div></div>
+          <img src="./index-images/n2.jpeg">
+        </a>
       </div>
     </section>
   </main>
@@ -351,9 +347,25 @@
       justify-content: space-between;
       align-items: center;
 
-      > div {
+      > a {
         flex-basis: 25%;
         margin: 0 2px;
+        position: relative;
+
+        div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: #fff;
+          opacity: 0;
+          transition: all 0.2s;
+        }
+
+        &:hover div {
+          opacity: 0.3;
+        }
 
         &:first-child {
           margin-left: 0;

@@ -1,11 +1,12 @@
 <template>
   <div class="wrap" id="text-life">
     <div class="boxes">
-      <div class="box" v-for="list in lists">
-        <a v-link="getLink(list.id)">
-          <img :src="list.image">
-        </a>
-      </div>
+      <a v-link="getLink(list.id)" class="box" v-for="list in lists">
+        <img :src="list.image">
+        <div class="overlay" v-if="list.text">
+          {{ list.text }}
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -15,15 +16,18 @@
     text: [
       {
         image: require('./images-list/web_01.jpg'),
-        id: '-KQphlf5tMPjfxLuv1hd'
+        id: '-KQphlf5tMPjfxLuv1hd',
+        text: '提升幸福感'
       },
       {
         image: require('./images-list/wenz2.jpg'),
-        id: '-KQproYSxDa13HjseOyG'
+        id: '-KQproYSxDa13HjseOyG',
+        text: '成为有趣的人'
       },
       {
         image: require('./images-list/wenz3.jpg'),
-        id: '-KQq2iPdo6MbSLEgwEU6'
+        id: '-KQq2iPdo6MbSLEgwEU6',
+        text: '多见人，少交友'
       }
     ],
     mei: [
@@ -83,8 +87,32 @@
     }
 
     .box {
+      display: block;
       flex-basis: 30%;
       margin: 20px 0;
+      position: relative;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(68, 68, 68, 0.4);
+        opacity: 0;
+        transition: opacity 0.2s;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-family: sans-serif;
+        letter-spacing: 5px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
 
       img {
         width: 100%;
