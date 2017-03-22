@@ -71,13 +71,13 @@
       </div>
     </section>
     <section id="index-3">
-      <h1 class="two-lines">下午茶</h1>
+      <h1 class="two-lines">午后时光</h1>
       <div class="list">
         <div class="item">
           <a v-link="{ name: '图片', query: { name: 'dt' } }">
             <div class="img">
               <div></div>
-              <img src="./index-images/web_01.jpg">
+              <img src="./index-images/web_01.jpg" height="178">
             </div>
           </a>
         </div>
@@ -112,7 +112,7 @@
         </a>
         <a href="https://www.instagram.com/p/BL_0e09BVVY/" target="_blank">
           <div></div>
-          <img src="./index-images/n3.jpeg">
+          <img src="./index-images/n3.jpeg" height="222">
         </a>
         <a href="https://www.instagram.com/p/BD0vWLxtmiQ/" target="_blank">
           <div></div>
@@ -244,7 +244,7 @@
     }
 
     .img-box {
-      padding: 70px 20px;
+      padding: 70px 20px 0 20px;
       display: flex;
       justify-content: space-between;
 
@@ -279,7 +279,12 @@
   #index-3 {
     @extend %section;
     padding-bottom: 100px;
-    padding-top: 20px;
+    padding-top: 0;
+
+    h1 {
+      font-size: 30px;
+      margin: 100px 0;
+    }
 
     a {
       font-weight: bold;
