@@ -3,20 +3,15 @@
     <div class="wrap">
       <p class="one">HI CHLORIS</p>
       <p>ccchloris.github.io</p>
-      <p>
-        <i class="icon-instagram"></i>
-        <i class="icon-weibo"></i>
-        <i class="icon-mail"></i>
+      <p class="icons">
+        <a href="https://www.instagram.com/naseemcc/" class="icon-instagram"></a>
+        <a href="http://weibo.com/u/5742369515" class="icon-weibo"></a>
       </p>
       <p>Copyright &copy; 2016 Chloris</p>
       <p>Maintain by <a href="http://www.limingkai.cn">Mike Lee</a></p>
     </div>
   </footer>
 </template>
-
-<script type="text/babel">
-  export default {}
-</script>
 
 <style lang="sass" rel="stylesheet/scss">
   #footer {
@@ -27,11 +22,21 @@
       text-align: center;
 
       .one {
-        font-size: 30px;
+        font-size: 32px;
       }
 
       a {
+        text-decoration: none;
         color: #000;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #999;
+        }
+      }
+
+      .icons a {
+        font-size: 26px;
       }
     }
   }

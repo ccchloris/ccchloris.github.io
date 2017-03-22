@@ -44,6 +44,7 @@
 
       h1 {
         font-family: sans-serif;
+        text-align: center;
       }
 
       .content {
@@ -51,55 +52,26 @@
         margin-bottom: 50px;
         font-size: 16px;
         color: #666;
-
-        img {
-          width: 70%;
-          height: auto !important;
-        }
       }
 
       .buy-it {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        position: relative;
-
-        &:before {
-          content: '';
-          display: block;
-          background: #d8d8d8;
-          width: 2px;
-          height: 88%;
-          position: absolute;
-          top: 5%;
-        }
-
-        .info {
-          padding-left: 10px;
-        }
-
-        .value {
-          color: #f84e4e;
-        }
-
-        .likes {
-          color: #999;
-        }
-
+        text-align: center;
+        margin-top: 30px;
         a {
           display: inline-block;
-          width: 100px;
+          width: 140px;
           text-align: center;
           font-size: 16px;
-          border: solid thin #ff897d;
+          border: 1px solid #000;
           height: 32px;
           line-height: 30px;
           border-radius: 2px;
-          color: #f7554d;
+          color: #000;
+          text-decoration: none;
 
           &:hover {
-            text-decoration: none;
+            border-color: #999;
+            color: #999;
           }
         }
       }

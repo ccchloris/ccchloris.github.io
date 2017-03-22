@@ -21,7 +21,7 @@
         <div>
           <div class="big-img img5" v-link="{name:'文章详情',params:{id:'-KKMXm8mObPh8zlCBktu'}}">
             <div class="img-masker">
-              <div>印花连衣裙</div>
+              <div>紫色连衣裙</div>
               <div>———— 服装 ————</div>
             </div>
           </div>

@@ -42,12 +42,12 @@
         id: '-KVLJQvl678vTyffuEcq'
       },
       {
-        image: require('./images-list/shi2.jpg'),
-        id: '-KeEo37jzG4G_kz0JA_l'
-      },
-      {
         image: require('./images-list/shi3.jpg'),
         id: '-KVLJhHyYnb6lXwKqdpb'
+      },
+      {
+        image: require('./images-list/shi2.jpg'),
+        id: '-KeEo37jzG4G_kz0JA_l'
       }
     ]
   }
