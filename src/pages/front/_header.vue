@@ -30,7 +30,7 @@
 
 <style lang="sass" rel="stylesheet/scss">
   #header-image {
-    background: url("./index-images/5.pic.jpg") center center;
+    background: url("./index-images/banner111.jpg") center center;
     background-size: auto 102%; // 防止底部出现白条
     height: 300px;
   }

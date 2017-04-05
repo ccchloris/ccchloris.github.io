@@ -55,8 +55,8 @@
           </div>
         </div>
         <div class="second-box">
-          <div>
-            <img src="./index-images/1.pic.png" alt="">
+          <div style="width: 314px">
+            <img src="./index-images/index-1.jpg" alt="">
           </div>
           <div class="need-masker">
             <a v-link="{ name: '文章详情', params: { id: '-KNBjrZlDPvTMfAZghwd' } }">

@@ -1,13 +1,13 @@
 <template>
   <footer id="footer">
     <div class="wrap">
-      <p class="one">HI CHLORIS</p>
-      <p>ccchloris.github.io</p>
+      <p class="one">HI RAYNA</p>
+      <p><a v-link="'/'">www.raynatsai.cn</a></p>
       <p class="icons">
-        <a href="https://www.instagram.com/naseemcc/" class="icon-instagram"></a>
+        <a href="https://www.instagram.com/hiraynacc/" class="icon-instagram"></a>
         <a href="http://weibo.com/u/5742369515" class="icon-weibo"></a>
       </p>
-      <p>Copyright &copy; 2016 Chloris</p>
+      <p>Copyright &copy; 2017 Rayna</p>
       <p>Maintain by <a href="http://www.limingkai.cn">Mike Lee</a></p>
     </div>
   </footer>
